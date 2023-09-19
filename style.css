@@ -113,6 +113,7 @@ main{
 .modal-close-btn:disabled{
     color: whitesmoke;
     opacity: 0.2;
+    cursor: not-allowed;
 }
 
 .modal-choice-btns{
@@ -120,6 +121,10 @@ main{
     padding: 8px 16px;
     display: flex;
     justify-content: center;
+}
+
+.reverse {
+    flex-direction: row-reverse;
 }
 
 .modal-btn{

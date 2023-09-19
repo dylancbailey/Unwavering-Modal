@@ -1,10 +1,16 @@
-const modalEl       = document.getElementById("modal")
-const modalCloseBtn = document.getElementById("modal-close-btn")
-const modalText     = document.getElementById("modal-text")
-const formEl        = document.getElementById("consent-form")
+const modalEl           = document.getElementById("modal")
+const modalCloseBtn     = document.getElementById("modal-close-btn")
+const modalText         = document.getElementById("modal-text")
+const modalDeclineBtn   = document.getElementById("modal-decline-btn")
+const modalBtnContainer = document.getElementById("modal-choice-btns")
+const formEl            = document.getElementById("consent-form")
 
 modalCloseBtn.addEventListener("click", function() {
     modalEl.style.display = "none"
+})
+
+modalDeclineBtn.addEventListener("mouseover", function() {
+    modalBtnContainer.classList.toggle("reverse")
 })
 
 formEl.addEventListener("submit", function(e) {
@@ -35,6 +41,7 @@ formEl.addEventListener("submit", function(e) {
             <img src="images/pirate.gif">
         </div>
         `
+        modalCloseBtn.disabled = false
     }, 3000);
 
 })
